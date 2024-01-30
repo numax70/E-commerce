@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>DocPeter</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row m-auto">
+            <!-- Colonna sinistra -->
+            <div id="left-column" class="col-lg-6 col-sm-12 mb-3">
+                <div class="card shadow-lg border-0">
+                    <div class="card-body">
+                        <div class="card mb-3 border-success">
+                            <div class="mini-card d-flex gap-2 align-items-start p-1" id="top_product">
+                                <span>
+                                    <img class="w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpMuUOMDbD5ZhZaJc3wGJuX3u4D7pqaEFnVg&usqp=CAU" alt="">
+                                </span>
+                                <span class="p-2 d-flex flex-column justify-content-center">
+                                    <h3 id="heading_uno">LOREM IPSUM1</h3>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    <span class="fw-lighter fst-italic">Prezzo: <span class="fw-bold" id="top_price"></span> €.</span>
+                                </span>
+                           </div>   
+                        </div>
+                        <div class="card mb-3 border-success">
+                            <div class="mini-card d-flex gap-2 align-items-start p-1" id="center_product">
+                                <span class="">
+                                    <img class="w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRloJkne5wjiHSrT7HzpOu6DYs5ca1IuWjM8w&usqp=CAU" alt="" >
+                                </span>
+                                <span class="p-2 d-flex flex-column justify-content-center">
+                                    <h3 id="heading_due">LOREM IPSUM2</h3>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    <span class="fw-lighter fst-italic">Prezzo: <span class="fw-bold fs-6" id="center_price"></span> €.</span>
+                                </span>
+                           </div>   
+                        </div>
+                        <div class="card mb-3 border-success">
+                            <div class="mini-card d-flex gap-2 align-items-start p-1" id="bottom_product">
+                                <span class="">
+                                    <img class="w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsYYIFsoRPVl5H28WYDmX-A5H_Arzgrp8ha-ZhiX5p2QLnlPqVqCp1zi-HNUafFgACSSM&usqp=CAU" alt="">
+                                </span>
+                                <span class="p-2 d-flex flex-column justify-content-center">
+                                    <h3 id="heading_tre">LOREM IPSUM3</h3>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    <span class="fw-lighter fst-italic">Prezzo: <span class="fw-bold" id="bottom_price"></span> €.</span>
+                                </span>
+                           </div>   
+                        </div>     
+                    </div>
+                </div>    
+            </div>
+            <!-- Colonna destra -->
+            <div id="right-column" class="col-lg-6 col-sm-12 mb-3">
+                <div class="card shadow-lg border-0">
+                    <div class="card-body">
+                        <h5 class="text-danger">Prezzo di listino <span><s id="prezzo-listino"></s> €.</span></h5>
+                        <span class="d-flex gap-2">
+                            <h3>Prezzo attuale:</h3>
+                            <h3 class="text-success" id="prezzoAttuale"></h3>
+                            <h3 class="text-success">€</h3>
+                            <h3 class="text-success" id="sconto"></h3>   
+                        </span>
+                        <p class="mt-2 mb-3">Aumenta la quantità aumenta il risparmio</p>
+                        <div class="row">
+                            <div id="my_tab" class="d-flex gap-3 p-3 text-center risparmio justify-content-around mb-3">
+                                <div class="col-3 shadow-sm bg-body-tertiary p-3" id="primaOfferta">
+                                    <p class="m-0">3 unità a</p>
+                                    <span class="m-0 fw-bold" id="tab_1">--</span>
+                                    <span class="fw-bold">€</span>
+                                    <p>ognuno</p>
+                                </div>
+                                <div class="col-3 shadow-sm bg-body-tertiary p-3" id="secondaOfferta">
+                                    <p class="m-0">4 unità a</p>
+                                    <span class="m-0 fw-bold" id="tab_2">--</span>
+                                    <span class="fw-bold">€</span>
+                                    <p>ognuno</p>
+                                </div>
+                                <div class="col-3 shadow-sm bg-body-tertiary p-3" id="terzaOfferta">
+                                    <p class="m-0">5 unità a</p>
+                                    <span class="m-0 fw-bold" id="tab_3">--</span>
+                                    <span class="fw-bold">€</span>
+                                    <p>ognuno</p>   
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column mt-4 justify-content-end">
+                            <span class="d-flex align-items-center justify-content-around text-center">
+                                <span class="d-flex flex-column align-items-start">
+                                  <span class="fw-bold">Quantità</span>
+                                    <div class="d-flex mb-4" style="flex-wrap:nowrap">
+                                        <button type="button" class="btn btn-light border rounded-0" id="remove" style="--bs-btn-padding-x: 0.90rem;"><b>-</b></button>
+                                        <input type="text" class="border border rounded-0 text-center" disabled id="itemAmount" value=1 style="width:40px;">
+                                        <button type="button" class="btn btn-light border rounded-0" id="add"><b>+</b></button></span>
+                                    </div>  
+                                </span>
+                                 
+                                <span class="">
+                                    <button type="button" class="btn btn-success rounded-5 btn-sm fw-bold" style="font-size:10px" data-bs-toggle="modal" data-bs-target="#staticBackdrop" id="addCart">AGGIUNGI AL CARRELLO</button>    
+                                </span>
+                                <span class="0">
+                                    <button class="border-0 bg-transparent" id="iconButton"><i class="fa-regular fa-heart fs-2 redButtonIcon" id="myIcon"></i></button>
+                                </span>
+                            </span>
+                        </div>
+                    </div>        
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modale carrello -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">Cart</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <p>***TOTALE***</p>
+                            <hr>
+                            <span class="fw-bolder">Quantità: </span>
+                            <span id="amount"></span>   
+                            <br>                            
+                            <span class="fw-bolder">Articolo: </span>
+                            <span id="articolo_name"></span>
+                            <br>
+                            <span class="fw-bolder">Totale parziale: </span>
+                            <span id="totale"></span>  
+                        </div>
+                    </div>
+                </div>           
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-sm btn-danger" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-sm btn-primary disabled">Stampa</button>
+            </div>
+        </div>
+    </div>
+  </div>
+  <script src="./assets/js/script.js"></script>    
+</body>
+</html>
